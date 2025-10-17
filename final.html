@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A surprise for youu Laddiiii💖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        :root {
+            --primary-pink: #ffb6c1;
+            --dark-pink: #e75480;
+            --light-green: #90ee90;
+            --dark-green: #7cdf7c;
+            --text-color: #8b5a7c;
+            --white: #fff;
+            --shadow: rgba(0,0,0,0.1);
+        }
+        
+        body {
+            background-color: #fff5f7;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffb6c1' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: var(--dark-pink);
+            margin: 20px 0;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            text-shadow: 2px 2px 4px var(--shadow);
+        }
+        
+        .intro {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 16px var(--shadow);
+            border: 3px solid var(--primary-pink);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .intro p {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .start-btn {
+            background-color: var(--light-green);
+            color: var(--text-color);
+            border: none;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+        
+        .start-btn:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .game-area {
+            position: relative;
+            width: 100%;
+            min-height: 400px;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .bear-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .bear-item {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        
+        .bear-item.active {
+            opacity: 1;
+            transform: scale(1);
+            animation: bearAppear 0.8s ease;
+        }
+        
+        @keyframes bearAppear {
+            0% { transform: scale(0.5); opacity: 0; }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .bear {
+            width: 140px;
+            height: 140px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        @media (max-width: 768px) {
+            .bear {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bear {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        .bear-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+        }
+        
+        .bear-item.active .bear-img {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .bear-name {
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+        
+        .thought-bubble {
+            position: absolute;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            border: 3px solid var(--light-green);
+            max-width: 250px;
+            min-height: 80px;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease;
+            z-index: 5;
+        }
+        
+        .thought-bubble.active {
+            opacity: 1;
+            transform: scale(1);
+            animation: bubblePop 0.5s ease;
+        }
+        
+        @keyframes bubblePop {
+            0% { transform: scale(0); opacity: 0; }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .thought-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid white;
+        }
+        
+        .thought-text {
+            font-size: 1.1rem;
+            color: var(--dark-pink);
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        
+        .final-message {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            color: var(--dark-pink);
+            text-align: center;
+            margin: 20px 0;
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px var(--shadow);
+            border: 3px solid var(--primary-pink);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .final-page {
+            display: none;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .final-bears-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            min-height: 400px;
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            .final-bears-container {
+                flex-direction: column;
+                gap: 60px;
+                min-height: 600px;
+            }
+        }
+        
+        .final-bear-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s ease;
+        }
+        
+        .final-bear-item.active {
+            opacity: 1;
+            transform: scale(1);
+            animation: finalBearAppear 0.8s ease;
+        }
+        
+        @keyframes finalBearAppear {
+            0% { transform: scale(0.5); opacity: 0; }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .final-bear {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+        }
+        
+        @media (max-width: 768px) {
+            .final-bear {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .final-bear {
+                width: 150px;
+                height: 150px;
+            }
+        }
+        
+        .final-bear:hover {
+            transform: scale(1.05);
+        }
+        
+        .final-bear-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.25));
+        }
+        
+        .final-bear-name {
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 6px 12px var(--shadow);
+        }
+        
+        .final-thought-bubble {
+            position: absolute;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            border: 4px solid var(--light-green);
+            max-width: 300px;
+            min-height: 100px;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease;
+            top: -130px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            z-index: 10;
+        }
+        
+        .final-thought-bubble.active {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+            animation: finalBubblePop 0.6s ease;
+        }
+        
+        @keyframes finalBubblePop {
+            0% { transform: translateX(-50%) scale(0); opacity: 0; }
+            70% { transform: translateX(-50%) scale(1.1); }
+            100% { transform: translateX(-50%) scale(1); opacity: 1; }
+        }
+        
+        .final-thought-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid white;
+        }
+        
+        .final-thought-text {
+            font-size: 1.3rem;
+            color: var(--dark-pink);
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        
+        .hearts-container, .flowers-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 20;
+        }
+        
+        .heart, .flower {
+            position: absolute;
+            font-size: 24px;
+            opacity: 0;
+            animation: float 3s ease-in-out forwards;
+        }
+        
+        .flower {
+            font-size: 28px;
+            animation: floatFlower 4s ease-in-out forwards;
+        }
+        
+        @keyframes float {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(0.5);
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(1.2);
+            }
+        }
+        
+        @keyframes floatFlower {
+            0% {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg) scale(0.7);
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-120px) rotate(180deg) scale(1);
+            }
+        }
+        
+        .reset-btn {
+            background-color: var(--light-green);
+            color: var(--text-color);
+            border: none;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px var(--shadow);
+        }
+        
+        .reset-btn:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .end-message {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            color: var(--dark-pink);
+            text-align: center;
+            margin: 30px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px var(--shadow);
+            border: 3px solid var(--primary-pink);
+            display: none;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .click-instruction {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: var(--dark-pink);
+            opacity: 0.8;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px var(--shadow);
+            border: 2px solid var(--primary-pink);
+            z-index: 100;
+            display: none;
+        }
+        
+        .music-control i {
+            font-size: 24px;
+            color: var(--dark-pink);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease;
+        }
+        
+        .instruction {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-control" id="musicControl">
+        <i class="fas fa-volume-up"></i>
+    </div>
+    
+    <div class="container">
+        <h1>🌸 Teddy Bear Adventure of Love 🌸</h1>
+        
+        <div class="intro fade-in" id="intro">
+            <p>Welcome to our magical 💗 world!</p>
+            <p>Click on each cute teddy bear as they appear to hear what I'm thinking🫠!</p>
+            <p>Find all 4 bears to reveal the final message!</p>
+            <button class="start-btn" id="startBtn">Start Adventure</button>
+        </div>
+        
+        <div class="game-area">
+            <div class="bear-container" id="bearContainer">
+                <!-- Bears will be added here dynamically -->
+            </div>
+        </div>
+        
+        <div class="final-message fade-in" id="finalMessage">
+            🌸 You found all the teddy bears! You're more and more beautiful than a garden in full bloom and sky with full moon! 🌸<br><br>
+            Remember: You're always loved more than you know! 💖🧿
+            Apology: Jaannuuu pleasee merko maaf krdo cuttuu ik maine recently aapko bhut hurt kiya h like maanta hu mai low tha par aap bhi to the, mai sambhal skta tha na bachaa samjhdari se sab solve kr skta tha kuch hone hi na deta if aapko pyarr se sambhalta to ik aap bhut jyada busy or stressed ho cuttuu kaam ko leke or apko bas ek happy peaceful time chahiye tha or sath me kaam kr ske hum but maine mna kiya or fir aapko sambhala bhi nhi bacchaaa mai pyaarr se smjha or sambhal bhi skta tha jannuu but maine bura kiya or fir glt kiya yrrrr please maaf krdo bachaa mujhe or next day bhi maine same repeat kiya yrrr chahe hi m aaya ho but ek pal ko sogya tha na aapko wait krwaya itna or aapke breakdown k baad aaya to koi mtlb nhi rha laaddooo pleasee mujhe maaf krdo yrrrr, mai sudharunga apni ye cheej aage se pyaarr se smjhdari se sambhalunga aapko or low honge chahe mai hu ya aap aapko always pyaarr se rkhunga bachaa aapse sab share krunga chottuuu, pleasee maaf krdo yrrrr, pleasee laaddooo, mai aapka pyaarraa mann hu na aapko bhut pyaarr krta hu yrrrr mai nhi reh skta aapke bina pleasee laaddoooo forgive me cuttuuuu 🥺🥺🥺
+        </div>
+        
+        <div class="final-page fade-in" id="finalPage">
+            <h2 style="font-size: clamp(1.8rem, 4vw, 2.2rem); margin-bottom: 10px;">🌸Two small cute surprise from me😙🌸</h2>
+            <p style="font-size: clamp(1.1rem, 3vw, 1.4rem); margin: 20px 0;">Two more special bears want to share messages with you!</p>
+            <p class="instruction">Click on each bear to see their special message</p>
+            
+            <div class="final-bears-container" id="finalBearsContainer">
+                <!-- Final bears will be added here -->
+            </div>
+        </div>
+        
+        <div class="end-message fade-in" id="endMessage">
+            🌟 I loveee youuu soo muchh laddiii!💞🧿🫂 🌟<br><br>
+            Always remember how special you are!<br>
+            Come back anytime for more teddy bear hugs! 🧸💕
+        </div>
+        
+        <button class="reset-btn" id="resetBtn" style="display: none;">Play Again</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const intro = document.getElementById('intro');
+            const startBtn = document.getElementById('startBtn');
+            const bearContainer = document.getElementById('bearContainer');
+            const finalMessage = document.getElementById('finalMessage');
+            const finalPage = document.getElementById('finalPage');
+            const finalBearsContainer = document.getElementById('finalBearsContainer');
+            const resetBtn = document.getElementById('resetBtn');
+            const endMessage = document.getElementById('endMessage');
+            const musicControl = document.getElementById('musicControl');
+            
+            let currentBearIndex = 0;
+            let bearsFound = 0;
+            let musicPlaying = false;
+            let finalBearsShown = 0;
+            
+            // Bear data with predefined positions to avoid overlap
+            const bearData = [
+                {
+                    id: 1,
+                    name: "💗",
+                    image: "1.png",
+                    message: "You are my reason to live you're my heartbeat!",
+                    position: { top: '60%', left: '20%' },
+                    bubblePosition: { top: '30%', left: '15%' }
+                },
+                {
+                    id: 2,
+                    name: "💞",
+                    image: "2.png",
+                    message: "Your smile can light up my whole world and I love you so much!",
+                    position: { top: '30%', left: '70%' },
+                    bubblePosition: { top: '10%', left: '75%' }
+                },
+                {
+                    id: 3,
+                    name: "❣️",
+                    image: "3.png",
+                    message: "I see my world world in your eyes, I wanna dive in your pearl like eyes forever!",
+                    position: { top: '70%', left: '60%' },
+                    bubblePosition: { top: '40%', left: '65%' }
+                },
+                {
+                    id: 4,
+                    name: "💝",
+                    image: "4.png",
+                    message: "You are more and more and moree beautiful than a night full of stars, lotus blooming in a lake and I love you from my whole heart!",
+                    position: { top: '40%', left: '40%' },
+                    bubblePosition: { top: '15%', left: '35%' }
+                }
+            ];
+            
+            // Final bear data - larger bears with bigger messages
+            const finalBearData = [
+                {
+                    id: 1,
+                    name: "💐",
+                    image: "11.png",
+                    message: "I wannna give you your favorite flowers lifetime, a garden full of flowers cuz your smile is the one, your happiness is the one I live for, I crave for🫠💝✨"
+                },
+                {
+                    id: 2,
+                    name: "💍",
+                    image: "22.png",
+                    message: "Your kindness shines like a star! You inspire everyone around you I'm proud of youu jaannuuu and you are inspiring me to gift a beautiful ring soon that compliments your beauty💞💗🧿🫠! 🌟"
+                }
+            ];
+            
+            // Start the game
+            startBtn.addEventListener('click', function() {
+                intro.style.display = 'none';
+                resetBtn.style.display = 'block';
+                showBear(currentBearIndex);
+            });
+            
+            // Show a specific bear
+            function showBear(index) {
+                bearContainer.innerHTML = '';
+                
+                if (index < bearData.length) {
+                    const bear = bearData[index];
+                    
+                    // Create bear item container
+                    const bearItem = document.createElement('div');
+                    bearItem.className = 'bear-item';
+                    bearItem.style.top = bear.position.top;
+                    bearItem.style.left = bear.position.left;
+                    
+                    // Create bear element
+                    const bearElement = document.createElement('div');
+                    bearElement.className = 'bear';
+                    bearElement.innerHTML = `
+                        <img src="${bear.image}" alt="${bear.name} Bear" class="bear-img">
+                        <div class="bear-name">${bear.name}</div>
+                    `;
+                    
+                    bearItem.appendChild(bearElement);
+                    
+                    // Create thought bubble
+                    const thoughtBubble = document.createElement('div');
+                    thoughtBubble.className = 'thought-bubble';
+                    thoughtBubble.style.top = bear.bubblePosition.top;
+                    thoughtBubble.style.left = bear.bubblePosition.left;
+                    thoughtBubble.innerHTML = `<div class="thought-text">${bear.message}</div>`;
+                    
+                    bearContainer.appendChild(thoughtBubble);
+                    
+                    // Create hearts container
+                    const heartsContainer = document.createElement('div');
+                    heartsContainer.className = 'hearts-container';
+                    heartsContainer.id = `hearts${bear.id}`;
+                    
+                    bearContainer.appendChild(bearItem);
+                    bearContainer.appendChild(heartsContainer);
+                    
+                    // Activate bear with animation
+                    setTimeout(() => {
+                        bearItem.classList.add('active');
+                    }, 300);
+                    
+                    // Add click event to bear
+                    bearElement.addEventListener('click', function() {
+                        handleBearClick(index, thoughtBubble, heartsContainer);
+                    });
+                }
+            }
+            
+            // Handle bear click
+            function handleBearClick(index, thoughtBubble, heartsContainer) {
+                // Show thought bubble immediately
+                thoughtBubble.classList.add('active');
+                
+                // Create heart animation
+                createHearts(heartsContainer);
+                
+                bearsFound++;
+                currentBearIndex++;
+                
+                // Move to next bear or show final message
+                if (currentBearIndex < bearData.length) {
+                    setTimeout(() => {
+                        // Clear current bear and show next
+                        showBear(currentBearIndex);
+                    }, 2500);
+                } else {
+                    setTimeout(() => {
+                        // Show final message
+                        finalMessage.style.display = 'block';
+                        
+                        // Show final page after delay
+                        finalMessage.style.display = 'block';
+                        // Add click to continue
+                        finalMessage.addEventListener('click', function() {
+                            finalMessage.style.display = 'none';
+                            finalPage.style.display = 'block';
+                            showFinalBears();
+                        });
+                    }, 2500);
+                }
+            }
+            
+            // Show final bears
+            function showFinalBears() {
+                finalBearsContainer.innerHTML = '';
+                finalBearsShown = 0;
+                
+                // Create flowers container
+                const flowersContainer = document.createElement('div');
+                flowersContainer.className = 'flowers-container';
+                finalBearsContainer.appendChild(flowersContainer);
+                
+                // Show both final bears at once
+                finalBearData.forEach((bear, index) => {
+                    const finalBearItem = document.createElement('div');
+                    finalBearItem.className = 'final-bear-item';
+                    
+                    // Position bears differently for desktop vs mobile
+                    if (window.innerWidth > 768) {
+                        // Desktop - side by side
+                        finalBearItem.style.flex = '1';
+                        finalBearItem.style.maxWidth = '300px';
+                    } else {
+                        // Mobile - stacked
+                        finalBearItem.style.width = '100%';
+                        finalBearItem.style.marginBottom = '40px';
+                    }
+                    
+                    const finalBear = document.createElement('div');
+                    finalBear.className = 'final-bear';
+                    finalBear.innerHTML = `
+                        <img src="${bear.image}" alt="${bear.name} Bear" class="final-bear-img">
+                        <div class="final-bear-name">${bear.name}</div>
+                    `;
+                    
+                    // Create thought bubble for final bear
+                    const thoughtBubble = document.createElement('div');
+                    thoughtBubble.className = 'final-thought-bubble';
+                    thoughtBubble.innerHTML = `<div class="final-thought-text">${bear.message}</div>`;
+                    
+                    finalBearItem.appendChild(thoughtBubble);
+                    finalBearItem.appendChild(finalBear);
+                    finalBearsContainer.appendChild(finalBearItem);
+                    
+                    // Activate the bear with animation
+                    setTimeout(() => {
+                        finalBearItem.classList.add('active');
+                    }, 500 + (index * 300));
+                    
+                    // Add click event to final bear
+                    finalBear.addEventListener('click', function() {
+                        handleFinalBearClick(thoughtBubble, flowersContainer, finalBear);
+                    });
+                });
+            }
+            
+            // Handle final bear click
+            function handleFinalBearClick(thoughtBubble, flowersContainer, bearElement) {
+                // Show thought bubble immediately
+                thoughtBubble.classList.add('active');
+                
+                // Create flower animation
+                createFlowers(flowersContainer);
+                
+                // Disable further clicks on this bear
+                bearElement.style.pointerEvents = 'none';
+                bearElement.style.opacity = '0.7';
+                
+                finalBearsShown++;
+                
+                // Check if both bears have been clicked
+                if (finalBearsShown >= finalBearData.length) {
+                    setTimeout(() => {
+                        showEndMessage();
+                    }, 3000);
+                }
+            }
+            
+            // Show end message
+            function showEndMessage() {
+                finalPage.style.display = 'none';
+                endMessage.style.display = 'block';
+                
+                // Show music control and play music
+                musicControl.style.display = 'flex';
+                playBackgroundMusic();
+                
+                // Create flowers container for end message
+                const flowersContainer = document.createElement('div');
+                flowersContainer.className = 'flowers-container';
+                endMessage.appendChild(flowersContainer);
+                createFlowers(flowersContainer);
+            }
+            
+            // Function to create heart animation
+            function createHearts(container) {
+                container.innerHTML = '';
+                
+                for (let i = 0; i < 20; i++) {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = '💖';
+                    heart.style.left = `${Math.random() * 100}%`;
+                    heart.style.animationDelay = `${Math.random() * 2}s`;
+                    container.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        if (heart.parentNode) heart.remove();
+                    }, 3000);
+                }
+            }
+            
+            // Function to create flower animation
+            function createFlowers(container) {
+                container.innerHTML = '';
+                
+                for (let i = 0; i < 15; i++) {
+                    const flower = document.createElement('div');
+                    flower.classList.add('flower');
+                    flower.innerHTML = '🌸';
+                    flower.style.left = `${Math.random() * 100}%`;
+                    flower.style.animationDelay = `${Math.random() * 3}s`;
+                    container.appendChild(flower);
+                    
+                    setTimeout(() => {
+                        if (flower.parentNode) flower.remove();
+                    }, 4000);
+                }
+            }
+            
+            // Music control
+            function playBackgroundMusic() {
+                if (!document.getElementById('backgroundMusic')) {
+                    const audio = document.createElement('audio');
+                    audio.id = 'backgroundMusic';
+                    audio.loop = true;
+                    audio.innerHTML = '<source src="I Love You Bodyguard.mp3" type="audio/mpeg">';
+                    document.body.appendChild(audio);
+                }
+                
+                const backgroundMusic = document.getElementById('backgroundMusic');
+                backgroundMusic.volume = 0.3;
+                backgroundMusic.play().then(() => {
+                    musicPlaying = true;
+                }).catch(error => {
+                    console.log("Audio play failed:", error);
+                });
+            }
+            
+            musicControl.addEventListener('click', function() {
+                const backgroundMusic = document.getElementById('backgroundMusic');
+                if (!backgroundMusic) return;
+                
+                if (musicPlaying) {
+                    backgroundMusic.pause();
+                    musicControl.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    musicPlaying = false;
+                } else {
+                    backgroundMusic.play();
+                    musicControl.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    musicPlaying = true;
+                }
+            });
+            
+            // Reset game
+            resetBtn.addEventListener('click', function() {
+                location.reload();
+            });
+            
+            // Handle window resize for responsive layout
+            window.addEventListener('resize', function() {
+                if (finalPage.style.display === 'block') {
+                    showFinalBears();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
